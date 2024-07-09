@@ -1,7 +1,7 @@
 # qBiRasos
 ## 一、什么是qBiRasos
 qBiRasos 是为应对qBittorrent订阅RSS下载时的遭遇的繁琐操作而开发的一套程序。
-### 程序的运行流程
+### qBiRasos的运行流程
 1. 输入RSS订阅地址，剧集名称，剧集季数
 2. 输入qbittorrent的登录用户账号密码，地址+端口，保存剧集的地址（使用媒体管理工具，如jellyfin时，建议把所有剧集保存在一个地址下的不同文件夹中，文件夹的名称以剧集标题命名。这也是本程序采用的方式）
 3. 登录qbittorrent

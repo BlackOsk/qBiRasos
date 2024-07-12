@@ -6,7 +6,7 @@ subscribe_ssr = 'ssr_url'
 # 剧名
 title_of_series = 'series_name'
 # 季数(比如第一季，则输入1)
-season_of_series = 1
+season_of_series = '1'
 
 #qbittorrent信息
 # qbittorrent 用户账号密码
@@ -47,7 +47,7 @@ headers['Cookie'] = cookie_with_SID
 
 
 # 2. 创建新目录
-createCategory_param = {'category': title_of_series, 'savePath' : series_directory + '/' + title_of_series + '/Season ' + str(season_of_series)}
+createCategory_param = {'category': title_of_series, 'savePath' : series_directory + '/' + title_of_series + '/Season ' + season_of_series}
 createCategory_request = requests.post(url_qbt + api_param + create_category_api , headers=headers, data=createCategory_param)
 
 

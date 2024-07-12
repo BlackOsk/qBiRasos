@@ -45,18 +45,14 @@ headers['Cookie'] = cookie_with_SID
 # 2. 获取torrent 列表, 输出改名列表
 def is_match(str):
     #集数提取规则
-    pattern1= '\\x20[0-9][0-9]\\x20'
-    pattern2 = '-[0-9][0-9]-'
-    pattern3 = '\[[0-9][0-9]\]'
-            
-    if re.search(pattern1, str):
-        return [True, re.search(pattern1, str).group()[1:-1]]
-    elif re.search(pattern2, str):
-        return [True, re.search(pattern2, str).group()[1:-1]]
-    elif re.search(pattern3, str):
-        return [True, re.search(pattern3, str).group()[1:-1]]
-    else:
-        return [False,str]
+    patterns = ['\\x20[0-9][0-9]\\x20', '-[0-9][0-9]-', '\[[0-9][0-9]\]']
+
+    for item in patterns:
+        if re.search(item,str):
+            return [True, re.search(item, str).group()[1:-1]]
+        else:
+            continue
+    return [False,str]
 
 # 调用torrent信息提取接口
 get_torrent_info_param = {'filter': 'all',

@@ -47,7 +47,7 @@ headers['Cookie'] = cookie_with_SID
 
 
 # 2. 创建新目录
-createCategory_param = {'category': title_of_series, 'savePath' : series_directory + title_of_series + '/Season ' + str(season_of_series)}
+createCategory_param = {'category': title_of_series, 'savePath' : series_directory + '/' + title_of_series + '/Season ' + str(season_of_series)}
 createCategory_request = requests.post(url_qbt + api_param + create_category_api , headers=headers, data=createCategory_param)
 
 
